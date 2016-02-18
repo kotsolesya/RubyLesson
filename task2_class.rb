@@ -1,24 +1,24 @@
 class Task2Class
   def initialize(n)
-    @b = Array.new(n){"#{rand((Time.now - 60*60*24*365)..Time.now).strftime("%d.%m")} #{rand(-10..10)}"}
+    @b = Array.new(n){"#{rand((Time.now - 60*60*24*365)..Time.now).strftime("%d.%m")} #{rand(-20..20)}"}
     @cm=Array.new(12,0)
     @kt=Array.new(12,0)
   end
 
   def countm
    @b.each { |tmp|
-     t=tmp[6..7].to_i
+     t=tmp[6..-1].to_i
      mounts=tmp[3..4].to_i-1
-    @cm[mounts]=@cm[mounts]+tmp[6..7].to_i
+    @cm[mounts]=@cm[mounts]+tmp[6..-1].to_i
      @kt[mounts]=@kt[mounts]+1
         }
-=begin   print "mount= "
+begin   print "mount= "
    print "#{@cm} "
      puts
    print "temperat= "
    print "#{@kt} "
    puts
-=end
+end
   end
 
   def avg
