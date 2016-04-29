@@ -39,6 +39,21 @@ class Task4_Class
        thing
    end
  end
+def symbol_keys(hash=@hash)
+  
+    hash.inject({}){|result, (key, value)|
+      new_key = case key
+              when String then key.to_sym
+              else key
+              end
+    new_value = case value
+                when Hash then symbol_keys(value)
+                else value
+                end
+    result[new_key] = new_value
+    result
+  }
+end
 
 
  end
