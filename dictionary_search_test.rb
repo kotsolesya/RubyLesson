@@ -1,10 +1,10 @@
 require 'test/unit'
-
+require 'minitest/unit'
 require './task_file'
 
-  class MyTest < MiniTest::Unit::TestCase
+  class DictionarySearchTest < MiniTest::Unit::TestCase
     def setup
-      @dict = TaskFile.new()
+      @dict = TaskFile.new("./wordsEn.txt")
     end
 
     def test_matches

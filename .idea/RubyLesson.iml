@@ -138,6 +138,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="minitest (v5.4.3, RVM: ruby-1.9.3-p547) [gem]" level="application" />
   </component>
 </module>
 
